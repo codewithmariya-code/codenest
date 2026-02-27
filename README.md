@@ -5,57 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🌟 Welcome to Codenest 🌟</title>
   <style>
-    /* Background Gradient */
-    body {
+    /* Reset default margin/padding */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
-      color: #333;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #a6c1ee 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      color: #fff;
     }
 
     h1 {
       font-size: 3em;
-      margin-top: 50px;
-      color: #fff;
-      text-shadow: 2px 2px #000;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
 
     p {
-      font-size: 1.5em;
-      margin: 20px auto;
-      width: 80%;
+      font-size: 1.3em;
+      max-width: 700px;
       line-height: 1.6;
-      color: #fff;
-      text-shadow: 1px 1px #555;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
 
-    .emoji {
-      font-size: 2em;
-      margin: 0 5px;
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     button {
-      padding: 15px 30px;
-      font-size: 1.5em;
-      margin: 20px;
+      padding: 15px 35px;
+      font-size: 1.2em;
       border: none;
-      border-radius: 15px;
-      background: #ff6f61;
-      color: white;
+      border-radius: 12px;
       cursor: pointer;
-      transition: transform 0.2s, background 0.3s;
+      background: linear-gradient(45deg, #ff6f61, #ff3b2f);
+      color: white;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     button:hover {
       transform: scale(1.1);
-      background: #ff3b2f;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
     }
 
     footer {
       margin-top: 50px;
-      color: #fff;
-      font-size: 1.2em;
+      font-size: 1em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -63,13 +86,14 @@
 
   <h1>🎉 Welcome to Codenest! 🌈✨</h1>
   <p>
-    Hello Friend! 😄🌟 <br>
-    This is your amazing website full of colors, emojis, and fun! 🌸💖🌼 <br>
-    Everything you see here is ready to make anyone happy and excited! 🎁🎈
+    Hi there! 😄🌟<br>
+    This is your colorful, fun, and friendly website. Explore, enjoy, and feel the good vibes! 🌸💖🌼
   </p>
 
-  <button>🛒 Buy Now!</button>
-  <button>💌 Contact Us!</button>
+  <div class="buttons">
+    <button>🛒 Buy Now!</button>
+    <button>💌 Contact Us!</button>
+  </div>
 
   <footer>
     Made with ❤️ and lots of fun emojis! 😍🎉🌈
